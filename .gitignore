@@ -1,0 +1,4 @@
+dist/
+src/charticle.egg-info/
+*~
+*.pyc
