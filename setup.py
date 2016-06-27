@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 ###################################################################
 
 NAME = "charticle"
-PACKAGES = find_packages(where=os.path.join("src", "charticle"))
+PACKAGES = find_packages(where=os.path.join("src"))
 META_PATH = os.path.join("src", "charticle", "__init__.py")
 KEYWORDS = ["chart", "labels", "thinkpiece"]
 CLASSIFIERS = [
@@ -20,20 +20,18 @@ CLASSIFIERS = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 2",
-    "Programming Language :: Python :: 2.6",
     "Programming Language :: Python :: 2.7",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.3",
     "Programming Language :: Python :: 3.4",
     "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Multimedia :: Graphics :: Presentation",
     "Topic :: Scientific/Engineering :: Visualization",
 ]
 INSTALL_REQUIRES = ['matplotlib', 'matplotlib_venn', 'attrs']
 
-EXTRAS_REQUIRE = { 'doc': ['sphinx'],
-                   'demo': ['jupyter'],
-}
+EXTRAS_REQUIRE = {'doc': ['sphinx'],
+                  'demo': ['jupyter'], }
 
 ###################################################################
 

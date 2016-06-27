@@ -2,3 +2,7 @@ dist/
 src/charticle.egg-info/
 *~
 *.pyc
+.coverage
+.coverage.*
+.tox/
+demo/.ipynb_checkpoints/

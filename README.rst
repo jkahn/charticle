@@ -1,13 +1,13 @@
-======================================
+=============================================================
 charticle: Combine the best (or worst) charts for thinkpieces
-======================================
+=============================================================
 
 .. image:: https://readthedocs.org/projects/charticle/badge/?version=stable
    :target: http://charticle.readthedocs.io/en/stable/?badge=stable
    :alt: Documentation Status
 
-.. image:: https://travis-ci.org/trochee/charticle.svg
-   :target: https://travis-ci.org/trochee/charticle
+.. image:: https://travis-ci.org/jkahn/charticle.svg
+   :target: https://travis-ci.org/jkahn/charticle
    :alt: CI status
 
 .. image:: https://codecov.io/github/jkahn/charticle/coverage.svg?branch=master
