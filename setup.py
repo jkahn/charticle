@@ -22,9 +22,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 2",
     "Programming Language :: Python :: 2.7",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.4",
     "Programming Language :: Python :: 3.5",
-    "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Multimedia :: Graphics :: Presentation",
     "Topic :: Scientific/Engineering :: Visualization",
 ]
@@ -71,7 +69,7 @@ LONG = (
     re.search("(\d+.\d.\d \(.*?\)\n.*?)\n\n\n----\n\n\n",
               read("CHANGELOG.rst"), re.S).group(1) +
     "\n\n`Full changelog " +
-    "<{uri}en/stable/changelog.html>`_.\n\n".format(uri=URI) +
+    "<{uri}en/latest/changelog.html>`_.\n\n".format(uri=URI) +
     read("AUTHORS.rst")
 )
 
