@@ -12,8 +12,8 @@ matrix:
     #   env: TOXENV=py27
     # - python: "3.4"
     #   env: TOXENV=py34
-    # - python: "3.5"
-    #   env: TOXENV=py35
+    - python: "	"
+      env: TOXENV=py35
     # - python: "pypy"
     #   env: TOXENV=pypy HYPOTHESIS_PROFILE=travis_pypy
 
@@ -26,7 +26,6 @@ matrix:
       env: TOXENV=docs
     - python: "3.5"
       env: TOXENV=readme
-
 
 install:
   - pip install tox

@@ -7,3 +7,4 @@ src/charticle.egg-info/
 .tox/
 demo/.ipynb_checkpoints/
 docs/_build
+.cache

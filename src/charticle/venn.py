@@ -10,22 +10,31 @@ from charticle import _validators
 class Venn3(object):
     """Object for a 3-label venn.  Set attributes at init or by assignment.
 
-    a_name, b_name, c_name:  Label text for the outer circles.
+    :param str a_name:
+    :param str b_name:
+    :param str c_name:  Label text for the outer circles.
 
-    a, b, c: Label text for the 1-member patches.
+    :param str a:
+    :param str b:
+    :param str c: Label text for the 1-member patches.
 
-    ab, ac, bc: Label text for the 2-set-intersection patches.
+    :param str ab:
+    :param str ac:
+    :param str bc: Label text for the 2-set-intersection patches.
 
-    abc: Label text for the full 3-set intersection.
+    :param str abc: Label text for the full 3-set intersection.
 
-    title: Text for the title of the plot.
+    :param str title: Text for the title of the plot.
 
-    >>> v3 = Venn3(a_name="useful", b_name = "structured", c_name="delimited")
-    >>> v3.abc = "discipline"
-    >>> v3.title = "Knowledge"
-    >>> v3.fontsizes.title = 22
-    >>> v3.sizes.abc *= 3
-    >>> v3.plot(); plt.show()
+    :param palette: a color palette for the sets.
+    :type palette: Venn3.Palette
+
+    :param sizes: the region sizes (relative to 1.0).
+    :type sizes: Venn3.Sizes
+
+    :param fontsizes: the font sizes for various labels.
+    :type fontsizes: Venn3.FontSizes
+
     """
 
     @attr.s(repr_ns="Venn3", slots=True)
@@ -52,8 +61,16 @@ class Venn3(object):
 
     @attr.s(repr_ns="Venn3", slots=True)
     class Palette(object):
-        """Container of color palette for all 3 items."""
-        a, b, c = [attr.ib(default=n, validator=_validators.is_string)
+        """Container of color palette for all 3 items.
+
+        :param `a,b,c`: color names for the three sets.
+        :type `a,b,c`: legal html colornames or hex codes
+        :param alpha: color combination alpha for intersections.
+        :type alpha: float in [0,1]
+
+        TODO: add some default "constant" palettes.
+        """
+        a, b, c = [attr.ib(default=n, validator=_validators.legal_color)
                    for n in ('red', 'green', 'blue')]
         alpha = attr.ib(default=0.4, validator=_validators.zero_to_one)
 
@@ -64,8 +81,8 @@ class Venn3(object):
         sets = attr.ib(default=14, validator=_validators.positive_int)
         intersections = attr.ib(default=12, validator=_validators.positive_int)
 
-    a_name, b_name, c_name = [attr.ib(default=n,
-                                      validator=_validators.is_string)
+    a_name, b_name, c_name = [attr.ib(default=None,
+                                      validator=_validators.optional_string)
                               for n in ('A', 'B', 'C')]
     a, b, c = [attr.ib(default=None, validator=_validators.optional_string)
                for n in ('a', 'b', 'c')]
@@ -84,8 +101,6 @@ class Venn3(object):
 
         Puts label strings in the right places and produces the figure.
 
-        palette: tuple of three color names for sets
-
         ax: the axis on which to plot this diagram. Defaults to current axes.
         """
         if ax is None:
@@ -103,14 +118,15 @@ class Venn3(object):
             # region colors,
             set_colors=(self.palette.a, self.palette.b, self.palette.c),
             alpha=self.palette.alpha,
-            # outer set names
-            set_labels=(self.a_name, self.b_name, self.c_name),
             ax=ax)
 
         # String 'A', 'B', 'C', are the outer set label names declared
         # by matplotlib_venn.
-        for label in ('A', 'B', 'C'):
-            v.get_label_by_id(label).set_fontsize(self.fontsizes.sets)
+        for label, val in (('A', self.a_name), ('B', self.b_name),
+                           ('C', self.c_name)):
+            t = v.get_label_by_id(label)
+            t.set_text("" if val is None else val)
+            t.set_fontsize(self.fontsizes.sets)
 
         # Numeric strings are the labels for the intersecting regions
         # declared by matplotlib_venn

@@ -18,6 +18,7 @@ charticle: Combine the best (or worst) charts for thinkpieces
 
 ``charticle`` is an `MIT
 <http://choosealicense.com/licenses/mit/>`_-licensed Python package
-designed to make it very easy to build new diagrams like the Drew Conway Data Science diagram.
+designed to make it very easy to build new diagrams like the Drew
+Conway Data Science diagram.
 
 This may not be wise.
