@@ -2,8 +2,8 @@
 charticle: Combine the best (or worst) charts for thinkpieces
 =============================================================
 
-.. image:: https://readthedocs.org/projects/charticle/badge/?version=stable
-   :target: http://charticle.readthedocs.io/en/stable/?badge=stable
+.. image:: https://readthedocs.org/projects/charticle/badge/?version=latest
+   :target: http://charticle.readthedocs.io/en/stable/?badge=latest
    :alt: Documentation Status
 
 .. image:: https://travis-ci.org/jkahn/charticle.svg

@@ -6,6 +6,9 @@ Example usages of charticle.
 Venn3
 ^^^^^
 
+Three-circle Venn diagrams are supported, *pace* Drew Conway's
+data science (last in this section).
+
 .. plot::
    :context:
    :include-source: true
