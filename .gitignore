@@ -8,3 +8,4 @@ src/charticle.egg-info/
 demo/.ipynb_checkpoints/
 docs/_build
 .cache
+build/
