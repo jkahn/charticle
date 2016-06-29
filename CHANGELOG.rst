@@ -5,6 +5,17 @@ Versions are trying to maintain major.minor.patch format.
 
 Major version 0: 2016.
 
+----
+
+
+0.0.2 (UNRELEASED)
+------------------
+
+Changes:
+^^^^^^^^
+
+Support Venn2 (beyond Venn3).
+
 
 ----
 
