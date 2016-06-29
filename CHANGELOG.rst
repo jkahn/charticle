@@ -31,4 +31,7 @@ First released version to pypi.
 venn.Venn3 is only working charticle type right now.
 
 
+----
 
+
+Previously unreleased versions didn't have working docs or tests.
