@@ -1,23 +1,23 @@
 Changelog
 =========
 
-Owner still working towards first beta release.
+Versions are trying to maintain major.minor.patch format.
+
+Major version 0: 2016.
+
 
 ----
 
-0.0.1 (UNRELEASED)
-------------------
+
+0.0.1 (29 June 2016)
+--------------------
 
 Changes:
 ^^^^^^^^
 
-Still trying to get all of:
+First released version to pypi.
 
-- coverage,
-- testing, and
-- docs
-
-to work nicely.
+venn.Venn3 is only working charticle type right now.
 
 
 ----
