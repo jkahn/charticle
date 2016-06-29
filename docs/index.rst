@@ -15,6 +15,8 @@ Contents:
 
    examples
    api
+   changelog
+   license
 
 
 Indices and tables
