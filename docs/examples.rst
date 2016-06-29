@@ -10,6 +10,8 @@ Venn3
    :context:
    :include-source: true
 
+   >>> import matplotlib
+   >>> matplotlib.use('Agg')
    >>> from matplotlib import pyplot as plt
    >>> from charticle.venn import Venn3
    >>> v3 = Venn3(a_name="useful", b_name = "structured", c_name="delimited")
