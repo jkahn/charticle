@@ -28,7 +28,7 @@ Add option to transform label into annotation, per @vennsplainer.
 
 
 0.0.2 (30 June 2016)
-------------------
+--------------------
 
 Changes:
 ^^^^^^^^
