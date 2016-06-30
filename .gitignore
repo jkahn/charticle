@@ -5,7 +5,6 @@ src/charticle.egg-info/
 .coverage
 .coverage.*
 .tox/
-demo/.ipynb_checkpoints/
 docs/_build
 .cache
 build/

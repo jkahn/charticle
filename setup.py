@@ -28,8 +28,7 @@ CLASSIFIERS = [
 ]
 INSTALL_REQUIRES = ['matplotlib', 'matplotlib_venn', 'attrs']
 
-EXTRAS_REQUIRE = {'doc': ['sphinx'],
-                  'demo': ['jupyter'], }
+EXTRAS_REQUIRE = {'doc': ['sphinx']}
 
 ###################################################################
 
