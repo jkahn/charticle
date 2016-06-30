@@ -16,6 +16,7 @@ Contents:
    examples
    api
    changelog
+   release_procedure
    license
 
 
