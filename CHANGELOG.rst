@@ -5,6 +5,25 @@ Versions are trying to maintain major.minor.patch format.
 
 Major version 0: 2016.
 
+
+----
+
+
+0.0.3 (UNRELEASED)
+------------------
+
+Changes:
+^^^^^^^^
+
+Add hierarchy diagrams?
+
+Add color palette shorthands to Venn diagrams?
+
+Add peripheral lines to circles?
+
+Add option to transform label into annotation, per @vennsplainer.
+
+
 ----
 
 
