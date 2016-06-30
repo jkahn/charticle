@@ -17,7 +17,7 @@ def test_zero_to_one():
 
 def test_positive_int():
     with pytest.raises(ValueError) as val:
-        venn.Venn3.FontSizes(title=0)
+        venn.FontSizes(title=0)
     assert 'not positive' in str(val.value)
 
 
