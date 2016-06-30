@@ -12,7 +12,7 @@ PACKAGES = find_packages(where=os.path.join("src"))
 META_PATH = os.path.join("src", "charticle", "__init__.py")
 KEYWORDS = ["chart", "labels", "thinkpiece"]
 CLASSIFIERS = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "Natural Language :: English",

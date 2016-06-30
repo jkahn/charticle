@@ -8,13 +8,15 @@ Major version 0: 2016.
 ----
 
 
-0.0.2 (UNRELEASED)
+0.0.2 (30 June 2016)
 ------------------
 
 Changes:
 ^^^^^^^^
 
-Support Venn2 (beyond Venn3).
+Support Venn2 diagrams (and Venn3).
+
+Improve documentation examples and testing.
 
 
 ----
