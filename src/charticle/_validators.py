@@ -26,6 +26,12 @@ def non_negative(inst, attrib, value):
         _pretty_value_error(inst, attrib, value, "is negative")
 
 
+def positive(inst, attrib, value):
+    is_real(inst, attrib, value)
+    if value <= 0.0:
+        _pretty_value_error(inst, attrib, value, " not positive")
+
+
 def zero_to_one(inst, attrib, value):
     is_real(inst, attrib, value)
     if value < 0.0 or value > 1.0:
@@ -34,8 +40,7 @@ def zero_to_one(inst, attrib, value):
 
 def positive_int(inst, attrib, value):
     is_integer(inst, attrib, value)
-    if value <= 0:
-        _pretty_value_error(inst, attrib, value, " not positive")
+    positive(inst, attrib, value)
 
 
 def legal_color(inst, attrib, value):
@@ -43,3 +48,6 @@ def legal_color(inst, attrib, value):
     if (value not in colors.cnames and not re.match(r'^#[0-9a-fA-F]{6}$',
                                                     value)):
         _pretty_value_error(inst, attrib, value, "not a legal color name")
+
+
+optional_legal_color = attr.validators.optional(legal_color)
