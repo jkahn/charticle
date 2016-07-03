@@ -8,6 +8,16 @@ Convenience functions
 
 - pass offset parameters to hierarchy objects so they can be plotted as
   legends to other graphs.
+
+- Add color palette shorthands to Venn diagrams?
+
+New decorations
+^^^^^^^^^^^^^^^
+  
+- Add peripheral lines to circles?
+
+- Add option to transform label into annotation, per @vennsplainer.
+
   
 Refactors
 ^^^^^^^^^
