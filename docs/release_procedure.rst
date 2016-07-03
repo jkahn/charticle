@@ -19,19 +19,6 @@ Land the current version
 
 - ``git push origin v{v}`` to make sure the tag has shipped to github.
 
-  
-Create the next launch version
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  
-- checkout a new branch named ``v{v+1}.dev``.
-
-- update ``__version__`` in ``charticle/__init__.py`` to ``v{v+1}.dev``
-  and ``CHANGELOG.rst`` to ``v{v+1} (unreleased)``.
-
-- commit these changes to the new branch.
-
-- push the new branch to github (``git push --set-upstream origin v{v+1}-dev``).
-
 Ship the tag to PyPI and advance ``master``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -43,4 +30,16 @@ Ship the tag to PyPI and advance ``master``
 
 - ``git push origin master``
 
-- (:program:`git` checkout the v{v+1}-dev branch again.)
+
+Update the `dev` branch
+^^^^^^^^^^^^^^^^^^^^^^^
+
+- merge the dev branch forward:
+  `git checkout dev && git merge --ff-only master`
+
+- update ``__version__`` in ``charticle/__init__.py`` to ``v{v+1}.dev``
+  and ``CHANGELOG.rst`` to ``v{v+1} (unreleased)``.
+
+- commit these changes to `dev` branch.
+
+- push the new branch to github: ``git push --set-upstream origin dev`` .

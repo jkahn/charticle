@@ -15,7 +15,8 @@ Major version 0: 2016.
 Changes:
 ^^^^^^^^
 
-None yet.
+Cleanups:
+- Tweaks to do development on `dev` branch permanently.
 
 
 0.0.3 (3 July 2016)
@@ -35,6 +36,7 @@ Cleanups:
 - py27 testing included in `tox.ini`.
 - refactoring validators.
 - cleaned up release procedure.
+
 
 ----
 
