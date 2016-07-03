@@ -169,6 +169,7 @@ You may of course set the colors as a whole or override them one at a time.
   >>> l3 = h.add_layer(lower=0.6, upper=1.0, label='top',
   ...                  polygon={'fill': True, 'color': 'green'})
   >>> h.plot()
+  >>> _ = plt.axis('scaled'); _ = plt.axis('off')
 
 There are ways to set defaults for all the layer polygon forms:
 
@@ -183,11 +184,21 @@ There are ways to set defaults for all the layer polygon forms:
 And it works just fine with an axis passed in:
 
 .. plot::
-  :context:
+  :context: reset
   :include-source: true
 
+  >>> from matplotlib import pyplot as plt
+  >>> from charticle.hierarchy import Hierarchy
+  >>> _ = plt.xkcd()
+  >>> h = Hierarchy(layer_text_defaults=dict(size='large'))
+  >>> _ = h.set_layers(['Strawberry', 'Vanilla', 'Chocolate'])
+  >>> h.set_color_cycle('pink', 'beige', 'brown')
   >>> ax = plt.gca()
+  >>> _ = ax.set_ylabel('deliciousness')
+  >>> _ = ax.set_xlabel('dependence on freshness')
   >>> h.plot(ax=ax)
+  >>> _ = plt.axis('scaled')
+  >>> _ = ax.set_title("this makes no sense.")
 
 
 
