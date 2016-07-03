@@ -1,4 +1,4 @@
-__version__ = "0.0.3"
+__version__ = "0.0.4.dev"
 
 __title__ = "charticle"
 __description__ = "Charticle combines best (worst?) of charts and articles."
