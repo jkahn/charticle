@@ -26,7 +26,7 @@ CLASSIFIERS = [
     "Topic :: Multimedia :: Graphics :: Presentation",
     "Topic :: Scientific/Engineering :: Visualization",
 ]
-INSTALL_REQUIRES = ['matplotlib', 'matplotlib_venn', 'attrs']
+INSTALL_REQUIRES = ['matplotlib', 'matplotlib_venn', 'attrs', 'cycler']
 
 EXTRAS_REQUIRE = {'doc': ['sphinx']}
 

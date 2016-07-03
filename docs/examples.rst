@@ -133,7 +133,65 @@ And you can still do multiple plots by passing an axis object to plot.
   >>> v.bc = "danger\nzone!"; _ = v.plot(ax3)
   >>> v.abc = "data\nscience"; _ = v.plot(ax4)
 
+:py:mod:`charticle.hierarchy` examples
+======================================
+The :py:mod:`charticle.hierarchy` package contains classes for pyramid
+diagrams, like Maslow's hierarchy.
+
+:py:class:`~charticle.hierarchy.Hierarchy`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. plot::
+  :context: reset
+  :include-source: true
+
+  >>> from matplotlib import pyplot as plt
+  >>> from charticle.hierarchy import Hierarchy
+  >>> h = Hierarchy(layer_text_defaults=dict(size='large'))
+  >>> _ = h.set_layers(['Physiological', 'Safety', 'Love/belonging',
+  ...		        'Esteem','Self-\nactualization'])
+  >>> h.plot()
+  >>> _ = plt.axis('scaled'); _ = plt.axis('off')
+
+You may of course set the colors as a whole or override them one at a time.
+
+.. plot::
+  :context: reset
+  :include-source: true
+
+  >>> from matplotlib import pyplot as plt
+  >>> from charticle.hierarchy import Hierarchy
+  >>> h = Hierarchy(layer_text_defaults=dict(size='x-large'))
+  >>> h.set_color_cycle('brown', 'white', 'pink')
+  >>> l1 = h.add_layer(lower=0.0, upper=0.3, label='bottom')
+  >>> l2 = h.add_layer(lower=0.3, upper=0.6, label='middle',
+  ...                  text={'weight': 'bold'})
+  >>> l3 = h.add_layer(lower=0.6, upper=1.0, label='top',
+  ...                  polygon={'fill': True, 'color': 'green'})
+  >>> h.plot()
+
+There are ways to set defaults for all the layer polygon forms:
+
+.. plot::
+  :context:
+  :include-source: true
+
+  >>> h.layer_polygon_defaults["fill"] = False
+  >>> h.layer_text_defaults["style"] = 'italic'
+  >>> h.plot()
+
+And it works just fine with an axis passed in:
+
+.. plot::
+  :context:
+  :include-source: true
+
+  >>> ax = plt.gca()
+  >>> h.plot(ax=ax)
+
+
+
 Future modules
 ==============
 
-Plans for `charticle.hierarchy` as well.
+Plans for `charticle.xy` as well?
