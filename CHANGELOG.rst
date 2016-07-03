@@ -9,20 +9,23 @@ Major version 0: 2016.
 ----
 
 
-0.0.3 (UNRELEASED)
-------------------
+0.0.3 (3 July 2016)
+-------------------
 
 Changes:
 ^^^^^^^^
 
-Add hierarchy diagrams?
+Add `charticle.hierarchy` diagrams and examples.
 
-Add color palette shorthands to Venn diagrams?
+Supports general text and polygon arguments for outer triangle & layers.
 
-Add peripheral lines to circles?
+Cleanups:
 
-Add option to transform label into annotation, per @vennsplainer.
-
+- wishlist, release procedures added to repo.
+- Jupyter notebooks removed from repo.
+- py27 testing included in `tox.ini`.
+- refactoring validators.
+- cleaned up release procedure.
 
 ----
 
