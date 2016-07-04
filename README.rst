@@ -6,6 +6,10 @@ charticle: Combine the best (or worst) charts for thinkpieces
    :target: http://charticle.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
+.. image:: https://badge.fury.io/py/charticle.svg
+   :target: https://badge.fury.io/py/charticle
+   :alt: PyPI version
+
 .. image:: https://travis-ci.org/jkahn/charticle.svg
    :target: https://travis-ci.org/jkahn/charticle
    :alt: CI status
@@ -13,6 +17,10 @@ charticle: Combine the best (or worst) charts for thinkpieces
 .. image:: https://codecov.io/github/jkahn/charticle/coverage.svg?branch=master
    :target: https://codecov.io/github/jkahn/charticle?branch=master
    :alt: Coverage
+
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+   :target: https://github.com/jkahn/charticle/blob/master/LICENSE
+   :alt: License
 
 .. teaser-begin
 
